@@ -35,6 +35,7 @@ gcloud container node-pools update $NODE_POOL \
 
 echo "Deploying sample workload..."
 kubectl apply -f ../k8s/nginx-deployment.yaml
-kubectl apply -f ../k8s/hpa.yaml
+kubectl apply -f ../k8s/nginx-service.yaml
+kubectl apply -f ../k8s/nginx-hpa.yaml
 
 echo "Deployment & automation setup completed"
